@@ -1,4 +1,4 @@
-# 🚀 Service Status Page
+# Service Status Page
 
 > A modern, production-ready status monitoring application built from scratch to track service health and manage incidents in real-time.
 
@@ -6,7 +6,7 @@
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.5.10-brightgreen)
 ![License](https://img.shields.io/badge/License-MIT-blue)
 
-## 💡 What is This?
+## What is This?
 
 Ever wondered how companies like GitHub, AWS, or Stripe show their "All Systems Operational" pages? This is my take on building one from scratch using Spring Boot.
 
@@ -18,21 +18,21 @@ It's a full-stack web application where you can:
 
 **Live Demo:** _(Add your deployment link here)_
 
-## ✨ Key Features
+## Key Features
 
 ### For Users (Public Pages)
-- 📊 **Live Status Dashboard** - See system health at a glance
-- 🔍 **Incident History** - Browse past issues and resolutions
-- 📱 **Responsive Design** - Works perfectly on mobile and desktop
+- **Live Status Dashboard** - See system health at a glance
+- **Incident History** - Browse past issues and resolutions
+- **Responsive Design** - Works perfectly on mobile and desktop
 
 ### For Admins (Protected Panel)
-- 🔐 **Secure Login** - Spring Security authentication
-- ➕ **Service Management** - Add, edit, or remove monitored services
-- 🚨 **Incident Tracking** - Create incidents with severity levels (Minor → Major → Critical)
-- 📝 **Status Updates** - Change service status in real-time
-- 🗑️ **Full CRUD Operations** - Complete control over all data
+- **Secure Login** - Spring Security authentication
+- **Service Management** - Add, edit, or remove monitored services
+- **Incident Tracking** - Create incidents with severity levels (Minor → Major → Critical)
+- **Status Updates** - Change service status in real-time
+- **Full CRUD Operations** - Complete control over all data
 
-## 🛠️ Built With
+## Built With
 
 I chose a modern, industry-standard tech stack:
 
@@ -48,7 +48,7 @@ I chose a modern, industry-standard tech stack:
 | **Maven** | Build Tool | Dependency management |
 | **JUnit 5** | Testing | 6 unit tests with 100% pass rate |
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - Java 17 or higher ([Download](https://adoptium.net/))
@@ -57,58 +57,71 @@ I chose a modern, industry-standard tech stack:
 
 ### Installation
 
-1️⃣ **Clone the repository**
+1. **Clone the repository**
 ```bash
-git clone https://github.com/huharun/statuspage.git
+git clone [https://github.com/huharun/statuspage.git](https://github.com/huharun/statuspage.git)
 cd statuspage
-```
+````
 
-2️⃣ **Build the project**
+2.  **Build the project**
+
+<!-- end list -->
+
 ```bash
 mvn clean install
 ```
 
-3️⃣ **Run the application**
+3.  **Run the application**
+
+<!-- end list -->
+
 ```bash
 mvn spring-boot:run
 ```
 
-4️⃣ **Open your browser**
+4.  **Open your browser**
+
+<!-- end list -->
+
 ```
 http://localhost:8080
 ```
 
-That's it! The app will start with sample data already loaded.
+That's it\! The app will start with sample data already loaded.
 
-## 🎮 How to Use
+## How to Use
 
 ### Viewing Status (No Login Required)
-1. Visit `http://localhost:8080/`
-2. See all services and their current status
-3. Check active incidents and their progress
-4. View complete incident history at `/history`
+
+1.  Visit `http://localhost:8080/`
+2.  See all services and their current status
+3.  Check active incidents and their progress
+4.  View complete incident history at `/history`
 
 ### Admin Panel (Login Required)
-1. Go to `http://localhost:8080/login`
-2. Login with:
-    - **Username:** `admin`
-    - **Password:** `admin123`
-3. You can now:
-    - Add new services to monitor
-    - Update service status (Operational → Degraded → Outage)
-    - Report new incidents
-    - Update incident status as you resolve issues
-    - Delete services or incidents
+
+1.  Go to `http://localhost:8080/login`
+2.  Login with:
+      - **Username:** `admin`
+      - **Password:** `admin123`
+3.  You can now:
+      - Add new services to monitor
+      - Update service status (Operational → Degraded → Outage)
+      - Report new incidents
+      - Update incident status as you resolve issues
+      - Delete services or incidents
 
 ### Database Console (For Developers)
-Want to see the raw data?
-1. Visit `http://localhost:8080/h2-console`
-2. Use these settings:
-    - **JDBC URL:** `jdbc:h2:mem:statuspagedb`
-    - **Username:** `sa`
-    - **Password:** _(leave empty)_
 
-## 📁 Project Structure
+Want to see the raw data?
+
+1.  Visit `http://localhost:8080/h2-console`
+2.  Use these settings:
+      - **JDBC URL:** `jdbc:h2:mem:statuspagedb`
+      - **Username:** `sa`
+      - **Password:** *(leave empty)*
+
+## Project Structure
 
 I organized this project following Spring Boot best practices:
 
@@ -138,11 +151,11 @@ statuspage/
 │
 ├── src/main/resources/
 │   ├── templates/                   # HTML pages (Thymeleaf)
-│   │   ├── index.html              # Homepage
-│   │   ├── history.html            # Incident history
-│   │   ├── login.html              # Login page
-│   │   ├── error.html              # Error page
-│   │   └── admin/                  # Admin panel pages
+│   │   ├── index.html               # Homepage
+│   │   ├── history.html             # Incident history
+│   │   ├── login.html               # Login page
+│   │   ├── error.html               # Error page
+│   │   └── admin/                   # Admin panel pages
 │   │
 │   └── application.properties       # App configuration
 │
@@ -152,7 +165,7 @@ statuspage/
     └── StatusControllerTest.java    # Tests web endpoints
 ```
 
-## 🧪 Testing
+## Testing
 
 I wrote comprehensive tests to ensure everything works:
 
@@ -161,128 +174,55 @@ I wrote comprehensive tests to ensure everything works:
 mvn test
 
 # You should see:
-# Tests run: 6, Failures: 0, Errors: 0 ✅
+# Tests run: 6, Failures: 0, Errors: 0 
 ```
 
 **Test Coverage:**
-- ✅ Application context loads correctly
-- ✅ Services can be saved and retrieved
-- ✅ Services are sorted by display order
-- ✅ Service status can be updated
-- ✅ Public pages load successfully
-- ✅ Controllers handle requests properly
 
-## ⚙️ Configuration
+  - Application context loads correctly
+  - Services can be saved and retrieved
+  - Services are sorted by display order
+  - Service status can be updated
+  - Public pages load successfully
+  - Controllers handle requests properly
+
+## Configuration
 
 ### Changing Admin Password
 
-Edit `src/main/java/com/arun/statuspage/config/SecurityConfig.java`:
+Update the `UserDetailsService` bean in `src/main/java/com/arun/statuspage/config/SecurityConfig.java` to change the default admin credentials.
 
-```java
-@Bean
-public UserDetailsService userDetailsService() {
-    UserDetails admin = User.builder()
-        .username("your_username")        // ← Change this
-        .password(passwordEncoder().encode("your_password"))  // ← Change this
-        .roles("ADMIN")
-        .build();
-    return new InMemoryUserDetailsManager(admin);
-}
-```
+### Database Setup
 
-### Using a Persistent Database
+By default, the application uses an in-memory H2 database. To configure persistent storage (like PostgreSQL or MySQL), update the connection properties in `src/main/resources/application.properties`.
 
-**Current setup:** Data is lost when you restart (H2 in-memory)
-
-**Want permanent storage?** Update `application.properties`:
-
-**Option 1: File-based H2** (data survives restarts)
-```properties
-spring.datasource.url=jdbc:h2:file:./data/statuspagedb
-```
-
-**Option 2: PostgreSQL** (production-ready)
-```properties
-spring.datasource.url=jdbc:postgresql://localhost:5432/statuspage
-spring.datasource.username=postgres
-spring.datasource.password=yourpassword
-spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
-```
-
-**Option 3: MySQL** (also production-ready)
-```properties
-spring.datasource.url=jdbc:mysql://localhost:3306/statuspage
-spring.datasource.username=root
-spring.datasource.password=yourpassword
-spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
-```
-
-## 🌐 Deployment
-
-### Deploy to Railway (Free, Recommended)
-
-1. Push your code to GitHub
-2. Go to [Railway.app](https://railway.app)
-3. Sign up with GitHub
-4. Click "New Project" → "Deploy from GitHub"
-5. Select this repository
-6. Railway auto-detects Spring Boot and deploys! ✨
-
-### Deploy to Render (Also Free)
-
-1. Go to [Render.com](https://render.com)
-2. Connect your GitHub repository
-3. Set these build settings:
-    - **Build Command:** `mvn clean install`
-    - **Start Command:** `java -jar target/statuspage-0.0.1-SNAPSHOT.jar`
-4. Deploy!
-
-### Build JAR for Self-Hosting
-
-```bash
-mvn clean package
-java -jar target/statuspage-0.0.1-SNAPSHOT.jar
-```
-
-Now you can run this anywhere with Java installed!
-
-## 🎯 What I Learned
-
-Building this project taught me:
-
-- 📚 **Spring Boot Architecture** - How MVC pattern works in real applications
-- 🔒 **Security** - Implementing authentication and authorization
-- 💾 **JPA & Hibernate** - Working with databases using ORM
-- 🎨 **Full-Stack Development** - Connecting backend to frontend
-- 🧪 **Testing** - Writing meaningful unit tests
-- 🏗️ **Project Structure** - Organizing code professionally
-- 🚀 **Deployment** - Taking an app from localhost to production
-
-## 🔮 Future Improvements
+## Future Improvements
 
 Ideas I'm considering:
 
-- [ ] REST API endpoints for programmatic access
-- [ ] Email notifications when incidents are reported
-- [ ] Scheduled health checks (ping services automatically)
-- [ ] User roles (Admin, Moderator, Viewer)
-- [ ] Incident update timeline with multiple status updates
-- [ ] Service uptime percentage graphs
-- [ ] Custom branding (logo, colors, company name)
-- [ ] Docker containerization
-- [ ] Metrics dashboard with Grafana
+  - [ ] REST API endpoints for programmatic access
+  - [ ] Email notifications when incidents are reported
+  - [ ] Scheduled health checks (ping services automatically)
+  - [ ] User roles (Admin, Moderator, Viewer)
+  - [ ] Incident update timeline with multiple status updates
+  - [ ] Service uptime percentage graphs
+  - [ ] Custom branding (logo, colors, company name)
+  - [ ] Docker containerization
+  - [ ] Metrics dashboard with Grafana
 
-## 📝 License
+## License
 
-This project is open source and available under the [MIT License](LICENSE).
+This project is open source and available under the [MIT License](https://www.google.com/search?q=LICENSE).
 
+## Acknowledgments
 
-## 🙏 Acknowledgments
+  - Spring Boot team for amazing documentation
+  - Bootstrap for the UI framework
+  - Stack Overflow community for helping debug issues
 
-- Spring Boot team for amazing documentation
-- Bootstrap for the UI framework
-- Stack Overflow community for helping debug issues
+-----
 
----
+**Built with love and lots of coffee**
 
-**Built with ❤️ and lots of ☕**
+```
+```
