@@ -224,5 +224,3 @@ This project is open source and available under the [MIT License](https://www.go
 
 **Built with love and lots of coffee**
 
-```
-```
